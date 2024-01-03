@@ -3,6 +3,7 @@ using practiseDSA;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +15,13 @@ namespace practiseDSA.Tests
         [TestMethod()]
         public void reverseString()
         {
-            Assert.Fail();
+            stringsOP sOP = new stringsOP();
+            string name = "Hello";
+            Assert.AreEqual("olleH",sOP.reverseString1(name));
+            Assert.AreEqual("olleH", sOP.reverseString2(name));
+            Assert.AreEqual("olleH", sOP.reverseString3(name));
         }
+
+        
     }
 }

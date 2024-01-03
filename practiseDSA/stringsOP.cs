@@ -17,10 +17,37 @@ namespace practiseDSA
         static char[] ch = { 'c', 's', 'h', 'a', 'r', 'p' };
         string testTest = new string(ch);
 
-        public string reverseString(string problem)
+        public string reverseString1(string problem)
+        {
+            char[] reversedStringChars = new char[problem.Length];
+            int j = 0;
+            for (int i = problem.Length-1; i>=0;i--)
+            {
+                reversedStringChars[j] = problem[i];
+                j++;
+            }
+            
+            return new string(reversedStringChars);
+        }
+
+        public string reverseString2(string problem)
         {
             string solution = string.Empty;
+            for (int i = problem.Length - 1; i >= 0; i--)
+            {
+                solution += problem[i];
+                
+            }
+            return solution;
+        }
 
+        public string reverseString3(string problem)
+        {
+            string solution = string.Empty;
+            foreach (var item in problem)
+            {
+                solution = item + solution;
+            }
             return solution;
         }
     }
