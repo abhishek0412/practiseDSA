@@ -21,12 +21,12 @@ namespace practiseDSA
         {
             char[] reversedStringChars = new char[problem.Length];
             int j = 0;
-            for (int i = problem.Length-1; i>=0;i--)
+            for (int i = problem.Length - 1; i >= 0; i--)
             {
                 reversedStringChars[j] = problem[i];
                 j++;
             }
-            
+
             return new string(reversedStringChars);
         }
 
@@ -36,7 +36,7 @@ namespace practiseDSA
             for (int i = problem.Length - 1; i >= 0; i--)
             {
                 solution += problem[i];
-                
+
             }
             return solution;
         }
@@ -50,5 +50,36 @@ namespace practiseDSA
             }
             return solution;
         }
+
+        public bool isStringPalindrom1(string problem)
+        {
+            bool isPalindrom = false;
+            if (problem == reverseString2(problem))
+            {
+                isPalindrom = true;
+            }
+            return isPalindrom;
+        }
+
+        public bool isStringPalindrom2(string problem)
+        {
+            bool isPalindrom = true;
+
+            int firstpointer = 0;
+            int lastpointer = problem.Length-1;
+            while (firstpointer < lastpointer)
+            {
+                if (problem[firstpointer] != problem[lastpointer])
+                {
+                    isPalindrom = false;
+                }
+                firstpointer++;
+                lastpointer--;
+                
+            }
+
+            return isPalindrom;
+        }
     }
+
 }

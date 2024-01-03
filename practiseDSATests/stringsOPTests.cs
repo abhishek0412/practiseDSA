@@ -22,6 +22,18 @@ namespace practiseDSA.Tests
             Assert.AreEqual("olleH", sOP.reverseString3(name));
         }
 
-        
+        [TestMethod()]
+        public void isPalindrom()
+        {
+            stringsOP sOP = new stringsOP();
+
+            Assert.IsTrue(sOP.isStringPalindrom1("radar"));
+
+            Assert.IsFalse(sOP.isStringPalindrom1("abhishek"));
+
+            Assert.IsTrue(sOP.isStringPalindrom2("radar"));
+
+            Assert.IsFalse(sOP.isStringPalindrom2("abhishek"));
+        }
     }
 }
