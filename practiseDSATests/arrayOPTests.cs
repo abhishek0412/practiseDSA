@@ -16,6 +16,8 @@ namespace practiseDSA.Tests
         {
             arrayOP aOP = new arrayOP();
             Assert.AreEqual(99, aOP.findLargetsInArray( new int[] { 2, 8, 2, 1, 4, 9, 4, 3, 66, 99, 33, 23 }));
+            Assert.AreEqual(66, aOP.findSecondLargetsInArray(new int[] { 2, 8, 2, 1, 4, 9, 4, 3, 66, 99, 33, 23 }));
+
         }
     }
 }
