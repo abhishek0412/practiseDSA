@@ -29,6 +29,40 @@ namespace practiseDSA.Tests
         }
 
         [TestMethod()]
+        public void removeDuplicates()
+        {
+            arrayOP aOP = new arrayOP();
+            int[] inputArray = new int[] { 1, 2, 3, 3, 6, 6, 7, 34 };
+            int[] outputArray = new int[] { 1, 2, 3, 6, 7, 34 };
+            CollectionAssert.AreEqual( outputArray, aOP.removeDuplicates(inputArray));
+            //Assert.AreEqual(outputArray, aOP.removeDuplicates(inputArray));
+
+            // In C#, when you use Assert.AreEqual to compare arrays, it checks whether the two arrays refer to the same instance, not whether their contents are equal.
+            // To compare the contents of arrays, you should use CollectionAssert.AreEqual(if you're using MSTest) or Assert.IsTrue(expected.SequenceEqual(actual)):
+            
+            string[] inputStringArray = new string[] { "ram","lakhman","hanuman","ram","vishnu" };
+            string[] outputStringArray = new string[] { "ram", "lakhman", "hanuman", "vishnu" };
+            CollectionAssert.AreEqual(outputArray, aOP.removeDuplicates(inputArray));
+        }
+
+        [TestMethod()]
+        public void distinctDuplicates()
+        {
+            arrayOP aOP = new arrayOP();
+            int[] inputArray = new int[] { 1, 2, 3, 3, 6, 6, 7, 34 };
+            int[] outputArray = new int[] { 1, 2, 3, 6, 7, 34 };
+            CollectionAssert.AreEqual(outputArray, aOP.removeDuplicates(inputArray));
+            //Assert.AreEqual(outputArray, aOP.removeDuplicates(inputArray));
+
+            // In C#, when you use Assert.AreEqual to compare arrays, it checks whether the two arrays refer to the same instance, not whether their contents are equal.
+            // To compare the contents of arrays, you should use CollectionAssert.AreEqual(if you're using MSTest) or Assert.IsTrue(expected.SequenceEqual(actual)):
+
+            string[] inputStringArray = new string[] { "ram", "lakhman", "hanuman", "ram", "vishnu" };
+            string[] outputStringArray = new string[] { "ram", "lakhman", "hanuman", "vishnu" };
+            CollectionAssert.AreEqual(outputArray, aOP.removeDuplicates(inputArray));
+        }
+
+        [TestMethod()]
         public void sumAllNumbers()
         {
             arrayOP aOP = new arrayOP();

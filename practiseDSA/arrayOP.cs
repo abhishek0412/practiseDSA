@@ -84,5 +84,47 @@ namespace practiseDSA
             }
             return sum;
         }
+
+        public int[] removeDuplicates(int[] problem)
+        {
+            HashSet<int> uniqueSet = new HashSet<int>();
+
+            foreach (var item in problem)
+            {
+                if (!uniqueSet.Contains(item))
+                {
+                    uniqueSet.Add(item);
+                }
+            }
+            
+            return uniqueSet.ToArray();
+        }
+
+        public string[] removeDuplicates(string[] problem)
+        {
+            HashSet<string> uniqueSet = new HashSet<string>();
+
+            foreach (var item in problem)
+            {
+                if (!uniqueSet.Contains(item))
+                {
+                    uniqueSet.Add(item);
+                }
+            }
+
+            return uniqueSet.ToArray();
+        }
+
+        public int[] distinctDuplicates(int[] problem)
+        {
+            return problem.Distinct().ToArray();
+        }
+
+        public string[] distinctDuplicates(string[] problem)
+        {
+            return problem.Distinct().ToArray();
+        }
     }
+
+
 }
