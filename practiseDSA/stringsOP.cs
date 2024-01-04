@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -79,6 +80,27 @@ namespace practiseDSA
             }
 
             return isPalindrom;
+        }
+
+        public Hashtable getWordsCount(string sentence)
+        {
+            Hashtable ht = new Hashtable();
+            string[] sentenceArray = sentence.Split();
+
+            foreach (string item in sentenceArray)
+            {
+                if (!ht.ContainsKey(item))
+                {
+                    ht.Add(item, 1);
+
+                }
+                else if (ht.ContainsKey(item))
+                {
+                    ht[item] = (int)ht[item] + 1;
+                }
+            }
+
+            return ht;
         }
     }
 
