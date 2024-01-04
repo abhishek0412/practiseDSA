@@ -54,5 +54,26 @@ namespace practiseDSA
 
             return secondLargest;
         }
+
+        public int findMissingNumber(int[] problem) 
+        {
+            if (problem == null || problem.Length < 2)
+            {
+                throw new ArgumentException("Array is null or empty.");
+            }
+            int n = problem.Length+1;
+
+            int expectedSum = (n * (n + 1)) / 2;
+
+            int actualSum = 0;
+
+            foreach (int item in problem)
+            {
+                actualSum = item + actualSum;
+            }
+
+            return expectedSum - actualSum;
+
+        }
     }
 }
