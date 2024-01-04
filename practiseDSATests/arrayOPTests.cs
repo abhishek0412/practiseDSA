@@ -27,5 +27,13 @@ namespace practiseDSA.Tests
             Assert.AreEqual(5, aOP.findMissingNumber(new int[] { 1,2,3,4,6,7 }));
             Assert.AreEqual(3, aOP.findMissingNumber(new int[] { 1, 2, 4, 6, 7,5 }));
         }
+
+        [TestMethod()]
+        public void sumAllNumbers()
+        {
+            arrayOP aOP = new arrayOP();
+            Assert.AreEqual(23, aOP.sumAllNumbers(new int[] { 1, 2, 3, 4, 6, 7 }));
+            Assert.AreEqual(25, aOP.sumAllNumbers(new int[] { 1, 2, 4, 6, 7, 5 }));
+        }
     }
 }

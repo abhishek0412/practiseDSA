@@ -28,7 +28,6 @@ namespace practiseDSA
             return solution;
         }
 
-
         public int findSecondLargetsInArray(int[] problem)
         {
             if (problem == null || problem.Length < 2)
@@ -74,6 +73,16 @@ namespace practiseDSA
 
             return expectedSum - actualSum;
 
+        }
+
+        public int sumAllNumbers(int[] problem) 
+        {
+            int sum = 0;
+            foreach (int item in problem)
+            {
+                sum = sum + item;
+            }
+            return sum;
         }
     }
 }
