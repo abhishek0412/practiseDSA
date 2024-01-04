@@ -11,7 +11,7 @@ namespace practiseDSA.Tests
     [TestClass()]
     public class arrayOPTests
     {
-        [TestMethod()]
+        [TestMethod(),TestCategory("smoke")]
         public void findLargetsInArrayTest()
         {
             arrayOP aOP = new arrayOP();
@@ -20,7 +20,7 @@ namespace practiseDSA.Tests
 
         }
 
-        [TestMethod()]
+        [TestMethod(), TestCategory("Acceptance")]
         public void findMissingNumberTest()
         {
             arrayOP aOP = new arrayOP();
@@ -28,7 +28,7 @@ namespace practiseDSA.Tests
             Assert.AreEqual(3, aOP.findMissingNumber(new int[] { 1, 2, 4, 6, 7,5 }));
         }
 
-        [TestMethod()]
+        [TestMethod(), TestCategory("smoke")]
         public void removeDuplicates()
         {
             arrayOP aOP = new arrayOP();
@@ -45,7 +45,7 @@ namespace practiseDSA.Tests
             CollectionAssert.AreEqual(outputArray, aOP.removeDuplicates(inputArray));
         }
 
-        [TestMethod()]
+        [TestMethod(), TestCategory("Acceptance")]
         public void distinctDuplicates()
         {
             arrayOP aOP = new arrayOP();
@@ -62,7 +62,7 @@ namespace practiseDSA.Tests
             CollectionAssert.AreEqual(outputArray, aOP.removeDuplicates(inputArray));
         }
 
-        [TestMethod()]
+        [TestMethod(), TestCategory("smoke")]
         public void sumAllNumbers()
         {
             arrayOP aOP = new arrayOP();

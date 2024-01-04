@@ -12,7 +12,7 @@ namespace practiseDSA.Tests
     [TestClass()]
     public class stringsOPTests
     {
-        [TestMethod()]
+        [TestMethod(), TestCategory("smoke")]
         public void reverseString()
         {
             stringsOP sOP = new stringsOP();
@@ -22,7 +22,7 @@ namespace practiseDSA.Tests
             Assert.AreEqual("olleH", sOP.reverseString3(name));
         }
 
-        [TestMethod()]
+        [TestMethod(), TestCategory("Acceptance")]
         public void isPalindrom()
         {
             stringsOP sOP = new stringsOP();
